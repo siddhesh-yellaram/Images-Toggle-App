@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Toggle</title>
+</head>
+
+<body>
+    <div class="button">
+        <button class="btn" onclick="imageToggle()">
+            Click To Toggle
+        </button>
+    </div>
+    <div class="container">
+        <img id="newImage" src="images/img1.jpg">
+    </div>
+    <script>
+        function imageToggle() {
+            var img = document.getElementById('newImage').src;
+            if (img.indexOf('img1.jpg') != -1) {
+                document.getElementById('newImage').src = 'images/img2.jpg';
+            }
+            else {
+                document.getElementById('newImage').src = 'images/img1.jpg';
+            }
+        }
+    </script>
+</body>
+
+</html>
